@@ -8,11 +8,6 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import ForeignKey, func
 from jinja2 import Markup
 
-from app.helpers import utils
-from app.helpers.loginHelper import is_logged_in
-from app.helpers.registerHelper import RegisterForm
-from app.helpers import checkoutHelper
-from app.helpers.checkoutHelper import hotel_li_block, flight_li_block
 
 template_folder = (os.path.dirname(sys.modules['__main__'].__file__))
 print('********************************' + template_folder)
