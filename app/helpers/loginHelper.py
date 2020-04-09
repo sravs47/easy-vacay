@@ -9,6 +9,6 @@ def is_logged_in(f):
         if 'logged_in' in session:
             return f(*args,**kwargs)
         else:
-            flash('Unauthorized, please login','danger')
+            flash('Unauthorized, Please Login','danger')
             return redirect(url_for('register_bp.register'))
     return wrap
