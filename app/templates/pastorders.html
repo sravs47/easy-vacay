@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{%block body %}
+
+<div class="container">
+    <table>
+        <thead>
+        <tr>
+            <th scope="col">Order Number</th>
+            <th scope="col">Booking Date</th>
+            <th scope="col">Username</th>
+            <th scope="col">flight Number</th>
+            <th scope="col">Hotel Name</th>
+            <th scope="col">Total Persons</th>
+            <th scope="col">Total Amount</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{orderblock}}
+    </table>
+</div>
+{% endblock %}
