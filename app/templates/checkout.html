@@ -1,0 +1,196 @@
+{% extends 'layout.html' %}
+{%block body %}
+<main class="mt-5 pt-4">
+    <div class="container wow fadeIn">
+        <!-- Heading -->
+        <h2 class="my-5 h2">Checkout</h2>
+        <!--Grid row-->
+        <div class="row">
+            <form method="POST" action="/order" role="form">
+                <!--Grid column-->
+                <div class="col-md-8 mb-4">
+                    <!--Card-->
+                    <div class="card">
+                        <!--Card content-->
+                        <form class="card-body">
+                            <!--Grid row-->
+                            <div class="row">
+                                <!--Grid column-->
+                                <div class="col-md-6 mb-2">
+                                    <!--firstName-->
+                                    <div class="md-form ">
+                                        <input type="text" id="firstName" name="firstName" class="form-control"
+                                               required>
+                                        <label for="firstName" class="">First name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <div class="md-form">
+                                        <input type="text" id="lastName" name="lastName" class="form-control" required>
+                                        <label for="lastName" class="">Last name</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Username-->
+                            <!--<div class="md-form input-group pl-0 mb-5">-->
+                            <!--<div class="input-group-prepend">-->
+                            <!--<span class="input-group-text" id="basic-addon1">@</span>-->
+                            <!--</div>-->
+                            <!--<input type="text" class="form-control py-0" placeholder="Username" aria-describedby="basic-addon1">-->
+                            <!--</div>-->
+
+                            <!--email-->
+                            <div class="md-form mb-5">
+                                <input type="text" id="email" name="email" class="form-control"
+                                       placeholder="youremail@example.com">
+                                <label for="email" class="">Email (optional)</label>
+                            </div>
+
+                            <!--address-->
+                            <div class="md-form mb-5">
+                                <input type="text" id="address" class="form-control" placeholder="1234 Main St"
+                                       name="address" required>
+                                <label for="address" class="">Address</label>
+                            </div>
+
+                            <!--address-2-->
+                            <div class="md-form mb-5">
+                                <input type="text" id="address2" name="address2" class="form-control"
+                                       placeholder="Apartment or suite">
+                                <label for="address2" class="">Address 2 (optional)</label>
+                            </div>
+                            <!--Grid row-->
+                            <div class="row">
+                                <!--Grid column-->
+                                <div class="col-lg-4 col-md-12 mb-4">
+                                    <label for="country">*Country</label>
+                                    <select class="custom-select d-block w-100" name="country" id="country" required>
+                                        <option value="">Choose...</option>
+                                        <option>United States</option>
+                                    </select>
+                                </div>
+                                <!--Grid column-->
+
+                                <!--Grid column-->
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <label for="state">*State</label>
+                                    <select class="custom-select d-block w-100" name="state" id="state" required>
+                                        <option value="">Choose...</option>
+                                        <option>Alaska</option>
+                                        <option>Arizona</option>
+                                        <option>Arkansas</option>
+                                        <option>California</option>
+                                        <option>Colorado</option>
+                                        <option>Florida</option>
+                                        <option>Georgia</option>
+                                        <option>Hawaii</option>
+                                        <option>Kansas</option>
+                                        <option>Lousiana</option>
+                                        <option>Texas</option>
+                                        <option>Washington</option>
+                                    </select>
+                                </div>
+                                <!--Grid column-->
+
+                                <!--Grid column-->
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <label for="zip">Zip</label>
+                                    <input type="text" class="form-control" id="zip" name="zip" placeholder="" required>
+                                </div>
+                                <!--Grid column-->
+                            </div>
+                            <!--Grid row-->
+
+                            <hr>
+                            <div class="md-form mb-5">
+                                <label for="Amount" class="">Total Amount</label>
+                                <input type="text" id="Amount" name="Amount" class="form-control" readonly="readonly"
+                                       value="${{amount}}">
+                            </div>
+
+
+                            <div id="paymentblock">
+                            <hr>
+                                <div class="d-block my-3">
+                                    <div class="custom-control custom-radio">
+                                        <input id="credit" name="paymentMethod" type="radio"
+                                               class="custom-control-input"
+                                               checked required>
+                                        <label class="custom-control-label" for="credit">Credit card</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input id="debit" name="paymentMethod" type="radio" class="custom-control-input"
+                                               required>
+                                        <label class="custom-control-label" for="debit">Debit card</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="cc-name">*Name on card</label>
+                                        <small class="text-muted"> (Full name as displayed on card)</small>
+                                        <input type="text" class="form-control" name="cc-name" id="cc-name"
+                                               placeholder="">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="cc-number">*Credit card number</label>
+                                        <input type="text" class="form-control" name="cc-number" id="cc-number"
+                                               placeholder="">
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 mb-3">
+                                        <label for="cc-expiration">*Expiration</label>
+                                        <input type="text" class="form-control" name="cc-expiration" id="cc-expiration"
+                                               placeholder="">
+
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="cc-expiration">*CVV</label>
+                                        <input type="text" class="form-control" name="cc-cvv" id="cc-cvv" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="mb-4">
+                            <p> If you have enough miles (25000 for Domestic, 50000 for International)</p>
+                            <input id="miles" type="checkbox" name="miles" value="miles"> Purchase with miles <br>
+                            <hr class="mb-4">
+
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">Place Order</button>
+
+                        </form>
+
+                    </div>
+                    <!--/.Card-->
+
+                </div>
+            </form>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-4 mb-4">
+
+                <!-- Heading -->
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-muted">Itenary</span>
+                    <!--<span class="badge badge-secondary badge-pill">3</span>-->
+                </h4>
+
+                <!-- Cart -->
+                <ul class="list-group mb-3 z-depth-1">
+
+                    {{orderblock}}
+
+                </ul>
+
+            </div>
+            <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+    </div>
+</main>
+<!--Main layout-->
+{% endblock %}
