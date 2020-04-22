@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="container">
+
+    <div class="col-md-8 col-md-offset-2 text-center">
+        <h2>Check Flight Status </h2>
+    </div>
+
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="fno" placeholder="Flight Number">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="date-start"
+                           placeholder="Flight Date"/>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <input type="submit" value="Get Status" id="getFlightStatus" class="btn btn-primary">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!--<div class="container" align="center" id="flightstatusresponse">-->
+<!--<div class="one-1" style="background-image: url(/static/images/flight.jpg);">-->
+<!--</div>-->
+<!--</div>-->
+
+
+<div id="fh5co-car" class="fh5co-section-gray">
+    <div class="container">
+        <div class="row">
+            <div id="flightstatusresponse"/>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
