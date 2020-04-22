@@ -33,3 +33,7 @@ def get_flight_status(flightno):
     return response
 
 
+@api_bp.route('/comments')
+def getcomments():
+    return json.dumps([r.as_dict() for r in testimonals.query.order_by(testimonals.c_date).limit(20)],
+                      default=utils.datetimeconverter)
