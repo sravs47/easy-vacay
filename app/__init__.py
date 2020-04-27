@@ -5,13 +5,15 @@ from flask import Flask
 from flask import render_template, session, redirect, url_for, flash
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
+
+from app.helpers import utils
 from app.helpers.loginHelper import is_logged_in
-
 from app.helpers.registerHelper import RegisterForm
-from app.dbModels.users import users
-
+from app.helpers import checkoutHelper
+from app.helpers.checkoutHelper import hotel_li_block, flight_li_block
 import socket
 from flasgger import Swagger
+
 
 template_folder = (os.path.dirname(sys.modules['__main__'].__file__))
 print('********************************' + template_folder)
