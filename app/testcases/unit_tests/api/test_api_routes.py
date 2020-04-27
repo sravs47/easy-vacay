@@ -69,7 +69,7 @@ class TestAPI(TestCase):
         mock_datetime.datetime.datetime.strptime = mock_requests.args['date']
         flight_listings.query.filter.return_value = [flight_listings1]
         response = api_routes.get_flight_status(117)
-        assert isinstance(response,int)
+        assert isinstance(response,str)
 
 
 

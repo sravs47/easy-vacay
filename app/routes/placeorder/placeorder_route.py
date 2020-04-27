@@ -12,7 +12,7 @@ placeorder_bp = Blueprint('placeorder_bp', __name__, template_folder='/app/templ
 @placeorder_bp.route('/order', methods=['POST', 'GET'])
 def placeOrder():
     if request.method == 'POST':
-        form = request.form
+        # form = request.form
         order: order_history = order_history.query.filter_by(username=session['username'],
                                                              order_status='incomplete').order_by(
             order_history.id.desc()).first()

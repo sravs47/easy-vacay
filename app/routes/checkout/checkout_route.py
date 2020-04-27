@@ -19,8 +19,6 @@ def checkout():
     hotelselection = args.get("hotelselection", None)
     flightselection = args.get("flightselection", None)
     totalcount = args.get("ppl", 0)
-    flightdata = None
-    hoteldata = None
     if request.method == "POST":
         orders = order_history(username=session['username'],
                                flight_id=flightselection, hotel_id=hotelselection,

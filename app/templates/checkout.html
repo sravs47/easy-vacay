@@ -41,22 +41,22 @@
 
                             <!--email-->
                             <div class="md-form mb-5">
-                                <input type="text" id="email" name="email" class="form-control"
-                                       placeholder="youremail@example.com">
+                                <input type="email" id="email" name="email" class="form-control"
+                                       placeholder="youremail@example.com" maxlength="30">
                                 <label for="email" class="">Email (optional)</label>
                             </div>
 
                             <!--address-->
                             <div class="md-form mb-5">
                                 <input type="text" id="address" class="form-control" placeholder="1234 Main St"
-                                       name="address" required>
+                                       name="address" required maxlength="50">
                                 <label for="address" class="">Address</label>
                             </div>
 
                             <!--address-2-->
                             <div class="md-form mb-5">
                                 <input type="text" id="address2" name="address2" class="form-control"
-                                       placeholder="Apartment or suite">
+                                       placeholder="Apartment or suite" maxlength="50">
                                 <label for="address2" class="">Address 2 (optional)</label>
                             </div>
                             <!--Grid row-->
@@ -95,7 +95,7 @@
                                 <!--Grid column-->
                                 <div class="col-lg-4 col-md-6 mb-4">
                                     <label for="zip">Zip</label>
-                                    <input type="text" class="form-control" id="zip" name="zip" placeholder="" required>
+                                    <input type="text" class="form-control" id="zip" name="zip" placeholder="" required maxlength="5">
                                 </div>
                                 <!--Grid column-->
                             </div>
@@ -129,25 +129,25 @@
                                         <label for="cc-name">*Name on card</label>
                                         <small class="text-muted"> (Full name as displayed on card)</small>
                                         <input type="text" class="form-control" name="cc-name" id="cc-name"
-                                               placeholder="">
+                                               placeholder="" maxlength="30" required>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="cc-number">*Credit card number</label>
                                         <input type="text" class="form-control" name="cc-number" id="cc-number"
-                                               placeholder="">
+                                               placeholder="" maxlength="16" required>
 
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-3 mb-3">
                                         <label for="cc-expiration">*Expiration</label>
-                                        <input type="text" class="form-control" name="cc-expiration" id="cc-expiration"
-                                               placeholder="">
+                                        <input type="month" class="form-control" name="cc-expiration" id="cc-expiration"
+                                               placeholder="" required>
 
                                     </div>
                                     <div class="col-md-3 mb-3">
                                         <label for="cc-expiration">*CVV</label>
-                                        <input type="text" class="form-control" name="cc-cvv" id="cc-cvv" placeholder="">
+                                        <input type="text" class="form-control" name="cc-cvv" id="cc-cvv" placeholder="" maxlength="3" required>
                                     </div>
                                 </div>
                             </div>
