@@ -1,2 +1,4 @@
 # easy-vacay
-Codebase for Easy Vacation App
+Vacation Planner website to book flights, hotels and packages
+
+
