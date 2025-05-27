@@ -1,7 +1,6 @@
-# easy-vacay
-Vacation Planner website to book flights, hotels and packages
+# Vacation Planner website to book flights, hotels and packages
 
-Tools/ Binaries to Install
+## Tools/ Binaries to Install
 
 Install python and pip
 
@@ -24,44 +23,47 @@ export PATH=$PATH:/usr/local/mysql/bin You can use MySQL WorkBench for an easy v
 
 Install all the below binaries using pip command Flask==1.0.2 Flask-WTF==0.14.2 flask-sqlalchemy Flask-Migrate itsdangerous==0.24 MarkupSafe==1.0 passlib==1.7.1 WTForms==2.2.1 *You can use pyCharm to install the above binaries by creating requirements.txt. It will read from the txt and on confirmation, download the requires binaries.
 
-Setting up the project
+## Setting up the project
 
 We need to create app.py
 
 from flask import Flask
 
+```
 app = Flask(__name__)
 @app.route('/')
 def index():
      return 'Hello, Flask!'
 if __name__ == '__main__':
      app.run(debug=True)
+```
+
 Needs git installed and set-up on your machine.
 In Terminal, ensure virtual environment is activated, where you want the project,
 
 To activate virtual environment, source bin/activate
 
-https://github.com/divyaviz1511/Easy-Vacay.git
+```https://github.com/sravs47easy-vacay.git/```
 
 flask db init flask db migrate -m "Initial migration" flask db upgrade
 
 If the above doesnt work, you can also perform:- flask db stamp head flask db migrate flask db upgrade
 
-To run the project:
+## To run the project:
 
 To run the app -> Using PyCharm -> Go to app -> init.py file -> right click & run. After that we can open the localhost browser with port 5000 to view our website. http://127.0.0.1:5000/index
 
-Functionalities (*Bolded are completed modules available in GIT repo)
+## Functionalities
 
-Account Registration
-Account Login
-Flight Booking
-Hotel Booking
-Package Booking (Flight + Hotel)
-Booking from pre-existing vacation packages
-Accumulate Mileage
-Redeem Mileage
-Flight Status
-Customer Experience Feedback
+* Account Registration
+* Account Login
+* Flight Booking
+* Hotel Booking
+* Package Booking (Flight + Hotel)
+* Booking from pre-existing vacation packages
+* Accumulate Mileage
+* Redeem Mileage
+* Flight Status
+* Customer Experience Feedback
 
 
