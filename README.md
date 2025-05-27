@@ -2,7 +2,7 @@
 
 ## Tools/ Binaries to Install
 
-Install python and pip
+Install python [https://www.python.org/downloads] and pip
 
 (optional, but recommended) Install pyCharm tool. [https://www.jetbrains.com/pycharm/download/#section=mac]
 
